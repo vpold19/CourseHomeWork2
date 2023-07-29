@@ -1,4 +1,4 @@
-package com.example.coursework2_generateexamquestions;
+package com.example.coursework2_generateexamquestions.ServiceTest;
 
 import com.example.coursework2_generateexamquestions.Model.Question;
 import com.example.coursework2_generateexamquestions.Service.ExaminerServiceImpl;
@@ -34,10 +34,8 @@ public class ExaminerServiceTest {
         when(questionService.getRandomQuestion())
                 .thenReturn(questions.get(2))
                 .thenReturn(questions.get(0))
-                .thenReturn(questions.get(1))
-                .thenReturn(questions.get(2))
-                .thenReturn(questions.get(0))
                 .thenReturn(questions.get(1));
+      ;
 
         Collection<Question> actual = examinerService.getQuestion(3);
         Assertions.assertEquals(3,actual.size());
